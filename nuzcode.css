@@ -7,6 +7,9 @@
   background-color: black;
   color: white;
   font-family: Share Tech;
+  i {  
+    color: white;
+  }
 }
 
 header {
@@ -70,4 +73,102 @@ header {
       }
     }
   }
+}
+
+main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.introduction{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+
+  .hi {
+    height: 30px;
+    width: 150px;
+    border-radius: 50px;
+    border: rgb(107, 107, 107) solid 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 50px;
+    background-color: #1E1E1E;
+  }
+
+  .hi:hover {
+    background-color: #2E2E2E;
+    cursor: pointer;
+  }
+
+  .text {
+    width: 80%;
+    text-align: center;
+    font-size: 130px;
+    font-weight: 600;
+    margin-top: 30px;
+  }
+
+  .text p{
+    color: #999
+  }
+
+  .mail-me{
+    height: 30px;
+    width: 150px;
+    border-radius: 50px;
+    border: rgb(107, 107, 107) solid 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 50px;
+    background-color: #1E1E1E;
+  }
+
+  .mail-me i {
+    margin-left: 10px;
+    background-color: #1E1E1E;
+  }
+
+  .mail-me a{
+    text-decoration: none;
+    background-color: #1E1E1E;
+  }
+
+  .mail-me:hover {
+    transform: scale(1.05);
+  }
+
+}
+
+.controller-image{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+
+  img {
+    width: 500px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  img:hover {
+    transform: scale(1.1);
+  }
+}
+
+.portfolio{
+  margin-top: 200px;
 }
