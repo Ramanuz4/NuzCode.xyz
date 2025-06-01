@@ -11,9 +11,13 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    
+
     <link rel="stylesheet" href="nuzcode.css" />
     <title>NuzCode</title>
   </head>
+
+  <div class="custom-cursor"></div>
   <body>
     <header>
       <div class="nav">
@@ -26,9 +30,9 @@
         </div>
 
         <div class="nav-links">
-          <a href="#portfolio">Portfolio</a>
-          <a href="#about">About</a>
-          <a href="#contact">Contact</a>
+          <a href="#portfolio" class="hover-target">Portfolio</a>
+          <a href="#about" class="hover-target">About</a>
+          <a href="#contact" class="hover-target">Contact</a>
         </div>
       </div>
     </header>
@@ -40,7 +44,7 @@
           <span class="gray-text">Game Developer & Designer</span>
           Crafting Immersive & Modern Experiences
         </div>
-        <div class="mail-me">
+        <div class="mail-me hover-target">
           <a
             href="https://mail.google.com/mail/?view=cm&to=ramanuzkashyap4@gmail.com"
             >Email Me <i class="fa-solid fa-location-arrow"></i
@@ -60,25 +64,104 @@
         </div>
         <div class="portfolio-items">
           <div class="portfolio-item">
-            <div class="portfolio-item1">
+            <div class="portfolio-item1 hover-target">
               <img src="/Assets/kitchen chaos logo.png" alt="Portfolio Item 1" />
               <div class="item-title"><a href="/Pages/KitchenChaos/kitchenchaos.html">Kitchen Chaos</a></div>
             </div>
             
-            <div class="portfolio-item2">
+            <div class="portfolio-item2 hover-target">
               <img src="/Assets/diamond plateau logo.png" alt="Portfolio Item 2" />
               <div class="item-title"><a href="/Pages/DiamondPlateau/diamondplateau.html">Diamond Plateau</a></div>
             </div>           
         </div>
       </div>
 
-      <div class="about">
-        
+      <div class="about" id="about">
+        <div class="about-intro">
+          Creating games that look stunning and keep players engaged.
+          <span class="gray-text"> No more games that only focus on visuals or mechanics alone—both matter! </span>
+          With my game development skills, your project will level up to the next dimension!
+        </div>
+
+        <div class="about-container">
+          <div class="sub-container1">
+            <div class="about-image"><img src="/Assets/pfp 2.jpg" alt="pfp big"></div>
+          </div>
+
+          <div class="sub-container2">
+          
+            <div class="about-button">About</div>
+
+            <div class="about-me">Game developer
+              <span class="gray-text">blending creativity and code to build immersive, playable worlds.</span>
+            </div>
+
+            <div class="about-small gray-text">My focus is on building immersive, player-first experiences that are as engaging to play as they are stunning to look at.
+            I craft worlds that respond, evolve, and stay with players long after the game ends.
+            My goal is to bring your vision to life through thoughtful, gameplay-driven design.
+            </div>
+
+            <div class="about-exp">
+              <div class="years">
+                <div class="subject">Years of experience</div>
+                <div class="number">1+</div>
+              </div>
+
+              <div class="clients">
+                <div class="subject">Clients</div>
+                <div class="number">1</div>
+              </div>
+
+              <div class="projects">
+                <div class="subject">Projects Completed</div>
+                <div class="number">2</div>
+              </div>
+
+              <div class="hours">
+                <div class="subject">Hours of Building Games</div>
+                <div class="number">50</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-section1" id="contact">
+        <div class="contact-button">
+          Contact
+        </div>
+
+        <div class="getintouch">
+          <div class="lets"><span class="gray-text">Let's Get in</span> Touch!</div>
+          <div class="amazing">Let's make something amazing together!</div>
+        </div>
+
+        <div class="mail-me hover-target">
+          <a
+            href="https://mail.google.com/mail/?view=cm&to=ramanuzkashyap4@gmail.com"
+            >Email Me <i class="fa-solid fa-location-arrow"></i
+          ></a>
+        </div>
+      </div>
+
+      <div class="contact-section2">
+        <a href="https://x.com/_RAMicle_" class="hover-target"><i class="fa-brands fa-x-twitter"></i>X.com</a>
+        <a href="https://www.instagram.com/_ramanuz_/" class="hover-target"><i class="fa-brands fa-instagram"></i>Instagram.com</a>
+        <a href="https://www.linkedin.com/in/ramanuz-kashyap/" class="hover-target"><i class="fa-brands fa-linkedin-in"></i>LinkedIn.com</a>
+        <a href="" class="hover-target"><i class="fa-solid fa-phone"></i>+91 - 9127271812</a>
       </div>
     </main>
 
-    <!-- <footer>
+    <footer>
       <p>&copy; 2025 NuzCode. All rights reserved.</p>
-    </footer> -->
+      <div class="ramanuzkashyap">
+        RAMANUZ KASHYAP
+      </div>
+    </footer>
+
+
+    <!-- CURSOR EFFECT -->
+    <script src="nuzcode.js"></script>
+    <!-- CURSOR EFFECT -->
   </body>
 </html>

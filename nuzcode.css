@@ -12,8 +12,32 @@
   }
 }
 
-html {
+html, body {
   scroll-behavior: smooth;
+  cursor: none;
+}
+
+/* CUSTOM CIRCLE */
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: width 0.2s ease, height 0.2s ease, background-color 0.2s ease, border 0.2s ease;
+}
+
+/* When hovering over target */
+body.hovering .custom-cursor {
+  width: 2cm;
+  height: 2cm;
+  background-color: transparent;
+  border: 2px solid white;
 }
 
 .gray-text {
@@ -23,6 +47,7 @@ html {
 header {
   position: sticky;
   top: 0px;
+  z-index: 1;
 }
 
 .nav {
@@ -71,6 +96,7 @@ header {
 
     a {
       text-decoration: none;
+      cursor: none;
       color: white;
       font-size: 20px;
       font-weight: 600;
@@ -120,8 +146,9 @@ main {
     font-weight: 600;
     margin-top: 30px;
   }
+}
 
-  .mail-me {
+.mail-me {
     height: 40px;
     width: 150px;
     border-radius: 50px;
@@ -143,12 +170,13 @@ main {
   .mail-me a {
     text-decoration: none;
     background-color: #1e1e1e;
+    cursor: none;
   }
 
   .mail-me:hover {
     transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
   }
-}
 
 .controller-image {
   width: 100%;
@@ -222,6 +250,7 @@ main {
       text-decoration: none;
       background-color: #1e1e1e;
       transition: all 0.3s ease-in-out;
+      cursor: none;
 
       &:hover {
         color: cyan;
@@ -285,5 +314,273 @@ main {
 }
 
 .about{
+  margin-top: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   
+  .about-intro{
+    width: 60%;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 600;
+    margin-top: 30px;
+    margin-bottom: 50px;
+  }
+
+  .about-container{
+    display: flex;
+    width: 60%;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 100px;
+  }
+
+  .sub-container1{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    img {
+      width: 500px;
+      height: auto;
+      border-radius: 20px;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+
+  .sub-container2{
+    width: 700px;
+    height: 670px;
+    display: flex;
+    flex-direction: column;
+
+    .about-button{
+      height: 40px;
+      width: 150px;
+      border-radius: 50px;
+      border: rgb(107, 107, 107) solid 1px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 20px;
+      font-weight: 600;
+      margin-top: 50px;
+      background-color: #1e1e1e;
+    }
+
+    .about-me {
+      width: 100%;
+      margin-bottom: 30px; 
+      font-size: 40px;
+      font-weight: 600;
+      margin-top: 30px;
+    }
+
+    .about-small{
+      width: 100%;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 1.5;
+      color: #bdbdbd;
+    }
+
+    .about-exp{
+      display: flex;
+      flex-wrap: wrap;
+      width: 700px;
+
+      .years{
+        width: 50%;
+        margin-top: 60px;
+
+        .subject {
+          font-size: 20px;
+          margin-bottom: 10px;
+          color: #999;
+        }
+
+        .number {
+          font-size: 40px;
+          font-weight: 600;
+        }
+      }
+
+      .clients{
+        width: 50%;
+        margin-top: 60px;
+
+        .subject {
+          font-size: 20px;
+          margin-bottom: 10px;
+          color: #999;
+        }
+
+        .number {
+          font-size: 40px;
+          font-weight: 600;
+        }
+      }
+
+      .projects{
+        width: 50%;
+        margin-top: 60px;
+
+        .subject {
+          font-size: 20px;
+          margin-bottom: 10px;
+          color: #999;
+        }
+
+        .number {
+          font-size: 40px;
+          font-weight: 600;
+        }
+      }
+
+      .hours{
+        width: 50%;
+        margin-top: 60px;
+
+        .subject {
+          font-size: 20px;
+          margin-bottom: 10px;
+          color: #999;
+        }
+
+        .number {
+          font-size: 40px;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
+
+.contact-section1 {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 1px solid #1b1b1b;
+  padding-bottom: 50px;
+  width: 100%;
+
+  .contact-button {
+    height: 50px;
+    width: 150px;
+    border-radius: 50px;
+    border: rgb(107, 107, 107) solid 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background-color: #1e1e1e;
+  }
+
+  .getintouch{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .lets{
+    width: 100%;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 600;
+    margin-top: 50px;
+    margin-bottom: 30px;
+  }
+
+  .amazing {
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 400;
+    color: #999;
+    margin-bottom: 50px;
+  }
+}
+
+.contact-section2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+  padding-bottom: 60px;
+  border-bottom: 1px solid #1b1b1b;
+  width: 100%;
+
+  a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+    margin-left: 20px;
+    margin-right: 20px;
+    border: rgb(107, 107, 107) solid 1px;
+    padding: 10px 20px;
+    border-radius: 50px;
+    background-color: #1e1e1e;
+
+    &:hover {
+      color: cyan;
+      border-color: cyan;
+      cursor: none;
+      transform: scale(1.05);
+      transition: all 0.3s ease-in-out;
+    }
+
+    i {
+      margin-left: 10px;
+      margin-right: 10px;
+      color: white;
+      transition: all 0.3s ease-in-out;
+      background-color: #1e1e1e;
+    }
+
+    &:hover {
+      color: cyan;
+      cursor: none;
+      
+      i {
+        color: cyan;
+        cursor: none;
+      }
+    }
+  }
+}
+
+footer {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-top: #111111 solid 2px;
+
+  p {
+    font-size: 20px;
+    font-weight: 600;
+    color: #999;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .ramanuzkashyap {
+    font-size: 250px;
+    font-weight: 600;
+    color: #272727;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
 }
