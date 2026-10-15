@@ -158,3 +158,28 @@ a, a:link, a:visited, a:hover, a:focus, a:active {
   color: #fff;
   text-decoration: none;
 }
+
+
+/* Embedded resume PDF viewer */
+.resume-viewer .resume-pdf {
+  display: block;
+  width: 100%;
+  height: min(82vh, 1100px);
+  min-height: 650px;
+  border: 1px solid #292929;
+  border-radius: 12px;
+  background: #fff;
+  margin: 24px 0 50px;
+}
+.resume-open {
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  border: 1px solid #555;
+  border-radius: 24px;
+  padding: 11px 16px;
+}
+.resume-open:hover { border-color: #aaa; }
+@media (max-width: 650px) {
+  .resume-viewer .resume-pdf { min-height: 70vh; }
+}
