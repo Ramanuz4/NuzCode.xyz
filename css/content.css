@@ -183,3 +183,69 @@ a, a:link, a:visited, a:hover, a:focus, a:active {
 @media (max-width: 650px) {
   .resume-viewer .resume-pdf { min-height: 70vh; }
 }
+
+
+/* Résumé page actions and PDF viewer chrome */
+.resume-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin: 28px 0 30px;
+}
+.resume-actions .resume-open,
+.resume-actions .resume-download {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-height: 44px;
+  border: 1px solid #555;
+  border-radius: 999px;
+  padding: 11px 17px;
+  font-size: 12px;
+  transition: border-color .2s ease, background .2s ease;
+}
+.resume-actions .resume-open:hover,
+.resume-actions .resume-download:hover {
+  border-color: #c6f277;
+  background: #151515;
+}
+.resume-frame {
+  overflow: hidden;
+  border: 1px solid #292929;
+  border-radius: 12px;
+  background: #111;
+}
+.resume-frame-head {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 14px 18px;
+  color: #999;
+  font: 10px monospace;
+  letter-spacing: 1px;
+  border-bottom: 1px solid #292929;
+}
+.resume-viewer .resume-pdf {
+  margin: 0;
+  width: 100%;
+  height: min(82vh, 1100px);
+  min-height: 650px;
+  display: block;
+  border: 0;
+  border-radius: 0;
+  background: #fff;
+}
+.resume-footnote {
+  color: #777;
+  font-size: 11px;
+  line-height: 1.7;
+  margin-top: 14px;
+}
+@media (max-width: 650px) {
+  .resume-viewer .resume-pdf { min-height: 70vh; }
+  .resume-actions { align-items: stretch; flex-direction: column; }
+  .resume-actions a { width: 100%; }
+}
