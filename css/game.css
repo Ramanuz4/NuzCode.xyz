@@ -100,7 +100,7 @@ a {
 }
 .details {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 16px;
 }
 .detail {
@@ -172,16 +172,26 @@ a {
     grid-template-columns: 1fr;
   }
   .screenshots img {
-    height: 220px;
+    height: clamp(180px, 65vw, 260px);
   }
   .game-head h1 {
-    font-size: 56px;
+    font-size: clamp(40px, 10vw, 56px);
   }
   .wrap {
-    margin-top: 30px;
+    width: calc(100% - 32px);
+    margin: 30px auto 64px;
   }
   .game-logo {
-    height: 170px;
+    height: clamp(150px, 48vw, 190px);
+  }
+  .detail {
+    padding: 18px;
+  }
+  .game-links {
+    gap: 9px;
+  }
+  .game-links a {
+    padding: 11px 13px;
   }
 }
 
@@ -190,4 +200,20 @@ a {
 a, a:link, a:visited, a:hover, a:focus, a:active {
   color: #fff;
   text-decoration: none;
+}
+
+@media (max-width: 380px) {
+  .wrap {
+    width: calc(100% - 28px);
+  }
+  .game-head {
+    padding-top: 26px;
+  }
+  .meta {
+    gap: 12px;
+    line-height: 1.6;
+  }
+  .game-links a {
+    font-size: 11px;
+  }
 }

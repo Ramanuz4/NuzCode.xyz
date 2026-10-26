@@ -249,7 +249,7 @@ a {
 }
 .game-card img {
   width: 100%;
-  height: 230px;
+  height: clamp(160px, 25vw, 230px);
   object-fit: contain;
   background: #101010;
   padding: 18px;
@@ -306,12 +306,61 @@ a {
     z-index: 1;
     background: #171717;
   }
-  
+}
+
+@media (max-width: 1099px) {
+  .tile-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: none;
+  }
+  .about-tile {
+    grid-column: 1;
+    grid-row: 1;
+    aspect-ratio: 1017 / 768;
+  }
+  .portfolio-tile {
+    grid-column: 1/3;
+    grid-row: 2;
+    aspect-ratio: 3121 / 768;
+  }
+  .contact-tile {
+    grid-column: 1/3;
+    grid-row: 3;
+    aspect-ratio: 1823 / 768;
+  }
+  .portrait-tile {
+    grid-column: 1;
+    grid-row: 4;
+    aspect-ratio: 1;
+  }
+  .tools-tile {
+    grid-column: 2;
+    grid-row: 4;
+    aspect-ratio: 1;
+  }
+  .resume-tile {
+    display: flex;
+    grid-column: 1/3;
+    grid-row: 5;
+    aspect-ratio: 1869 / 768;
+  }
+}
+
+@media (min-width: 701px) and (max-width: 1099px) {
+  .tile-grid {
+    gap: var(--gap);
+  }
+  .game-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 @media (max-width: 700px) {
   .topline {
     height: 58px;
     grid-template-columns: 1fr auto;
     font-size: 11px;
+    padding: 0 10px;
   }
   .top-role {
     display: none;
@@ -325,36 +374,10 @@ a {
     white-space: normal;
   }
   .tile-grid {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 180px 180px 180px 120px;
     gap: 9px;
   }
-  .about-tile {
-    grid-column: 1;
-    grid-row: 1;
-  }
-  .portfolio-tile {
-    grid-column: 2;
-    grid-row: 1;
-  }
-  .contact-tile {
-    grid-column: 1/3;
-    grid-row: 2;
-  }
-  .portrait-tile {
-    grid-column: 1;
-    grid-row: 3;
-  }
   .tools-tile {
-    grid-column: 2;
-    grid-row: 3;
     padding: 0;
-  }
-  .resume-tile {
-    display: flex;
-    grid-column: 1/3;
-    grid-row: 4;
-    min-height: 120px;
   }
   .tile-label {
     left: 15px;
@@ -378,11 +401,17 @@ a {
     grid-template-columns: 1fr;
   }
   .game-card img {
-    height: 200px;
+    height: clamp(160px, 58vw, 200px);
+    padding: 14px;
+  }
+  .game-index {
+    width: calc(100% - 28px);
+    margin: 36px auto;
   }
   .footer {
     grid-template-columns: 1fr 1fr;
     gap: 12px;
+    padding: 18px 10px;
   }
   .footer span:nth-child(2) {
     text-align: right;
@@ -390,6 +419,28 @@ a {
   .footer a {
     grid-column: 1/3;
     text-align: left;
+  }
+}
+
+@media (max-width: 380px) {
+  .hero-name {
+    font-size: 12vw;
+  }
+  .tile-label {
+    left: 12px;
+    bottom: 14px;
+    font-size: 13px;
+  }
+  .arrow {
+    right: 12px;
+    bottom: 12px;
+  }
+  .tool-icons {
+    gap: 5px;
+  }
+  .tool-icon {
+    width: 31px;
+    height: 31px;
   }
 }
 
@@ -404,4 +455,3 @@ a, a:link, a:visited, a:hover, a:focus, a:active {
 .arrow ion-icon, .card-link ion-icon, .footer a ion-icon, .resume-open ion-icon { vertical-align: -0.12em; }
 .arrow ion-icon { font-size: 1.15em; }
 .tool-icon ion-icon { display: block; font-size: 1.35em; }
-}
